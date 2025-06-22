@@ -10,4 +10,10 @@ function showRandomCard() {
     `;
 }
 
-document.addEventListener('DOMContentLoaded', showRandomCard);
+document.addEventListener('DOMContentLoaded', () => {
+    showRandomCard();
+    const btn = document.getElementById('shuffleButton');
+    if (btn) {
+        btn.addEventListener('click', showRandomCard);
+    }
+});

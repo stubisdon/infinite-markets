@@ -27,3 +27,12 @@ body {
 .card p {
     margin: 8px 0;
 }
+
+.shuffle-btn {
+    display: block;
+    margin: 20px auto 0;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
