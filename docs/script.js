@@ -29,24 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const shareBtn = document.getElementById('shareButton');
     if (shareBtn) {
         shareBtn.addEventListener('click', async () => {
-            if (typeof umami === 'function') {
-                umami.track('share');
-            }
             const url = window.location.href;
-            if (navigator.share) {
-                try {
+            try {
+                if (navigator.share) {
                     await navigator.share({ title: document.title, url });
-                } catch (err) {
-                    console.error('Share failed:', err);
-                }
-            } else if (navigator.clipboard) {
-                try {
+                } else if (navigator.clipboard) {
                     await navigator.clipboard.writeText(url);
                     alert('Link copied to clipboard!');
-                } catch (err) {
+                } else {
                     prompt('Copy this link:', url);
                 }
-            } else {
+                if (typeof umami === 'function') {
+                    umami.track('share');
+                }
+            } catch (err) {
+                console.error('Share failed:', err);
                 prompt('Copy this link:', url);
             }
         });
