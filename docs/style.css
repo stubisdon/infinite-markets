@@ -41,18 +41,24 @@ body {
 .shuffle-btn {
     display: block;
     margin: 20px auto 0;
-    font-size: 32px;
     background: none;
     border: none;
     cursor: pointer;
+}
+.shuffle-btn img {
+    width: 32px;
+    height: 32px;
 }
 
 .share-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    font-size: 32px;
     background: none;
     border: none;
     cursor: pointer;
+}
+.share-btn img {
+    width: 32px;
+    height: 32px;
 }

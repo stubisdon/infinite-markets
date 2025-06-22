@@ -9,7 +9,9 @@ function showRandomCard() {
             <p><strong>Examples:</strong> ${card["Examples"]}</p>
             <p><strong>Notables:</strong> ${card["Notables"]}</p>
         </div>
-        <button id="shuffleButton" class="shuffle-btn" aria-label="Shuffle">🔀</button>
+        <button id="shuffleButton" class="shuffle-btn" aria-label="Shuffle">
+            <img src="shuffle.svg" alt="Shuffle" width="32" height="32" />
+        </button>
     `;
     const btn = document.getElementById('shuffleButton');
     if (btn) {
