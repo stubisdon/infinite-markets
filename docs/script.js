@@ -15,7 +15,12 @@ function showRandomCard() {
     `;
     const btn = document.getElementById('shuffleButton');
     if (btn) {
-        btn.addEventListener('click', showRandomCard);
+        btn.addEventListener('click', () => {
+            if (typeof umami === 'function') {
+                umami.track('shuffle');
+            }
+            showRandomCard();
+        });
     }
 }
 
@@ -24,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const shareBtn = document.getElementById('shareButton');
     if (shareBtn) {
         shareBtn.addEventListener('click', async () => {
+            if (typeof umami === 'function') {
+                umami.track('share');
+            }
             const url = window.location.href;
             if (navigator.share) {
                 try {
