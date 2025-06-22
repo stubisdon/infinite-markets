@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct InfiniteMarketsAppApp: App {
+struct InfiniteMarketsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
