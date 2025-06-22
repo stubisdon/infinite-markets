@@ -7,13 +7,12 @@ function showRandomCard() {
         <p><strong>Why Infinite?</strong> ${card["Why Infinite?"]}</p>
         <p><strong>Examples:</strong> ${card["Examples"]}</p>
         <p><strong>Notables:</strong> ${card["Notables"]}</p>
+        <button id="shuffleButton" class="shuffle-btn" aria-label="Shuffle">🔀</button>
     `;
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showRandomCard();
     const btn = document.getElementById('shuffleButton');
     if (btn) {
         btn.addEventListener('click', showRandomCard);
     }
-});
+}
+
+document.addEventListener('DOMContentLoaded', showRandomCard);
