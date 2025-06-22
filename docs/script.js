@@ -3,10 +3,12 @@ function showRandomCard() {
     const card = marketCards[Math.floor(Math.random() * marketCards.length)];
     const container = document.getElementById('card');
     container.innerHTML = `
-        <h1>${card["Market"]}</h1>
-        <p><strong>Why Infinite?</strong> ${card["Why Infinite?"]}</p>
-        <p><strong>Examples:</strong> ${card["Examples"]}</p>
-        <p><strong>Notables:</strong> ${card["Notables"]}</p>
+        <div class="card-body">
+            <h1>${card["Market"]}</h1>
+            <p><strong>Why Infinite?</strong> ${card["Why Infinite?"]}</p>
+            <p><strong>Examples:</strong> ${card["Examples"]}</p>
+            <p><strong>Notables:</strong> ${card["Notables"]}</p>
+        </div>
         <button id="shuffleButton" class="shuffle-btn" aria-label="Shuffle">🔀</button>
     `;
     const btn = document.getElementById('shuffleButton');
