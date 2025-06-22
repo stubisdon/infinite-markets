@@ -17,4 +17,28 @@ function showRandomCard() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', showRandomCard);
+document.addEventListener('DOMContentLoaded', () => {
+    showRandomCard();
+    const shareBtn = document.getElementById('shareButton');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', async () => {
+            const url = window.location.href;
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: document.title, url });
+                } catch (err) {
+                    console.error('Share failed:', err);
+                }
+            } else if (navigator.clipboard) {
+                try {
+                    await navigator.clipboard.writeText(url);
+                    alert('Link copied to clipboard!');
+                } catch (err) {
+                    prompt('Copy this link:', url);
+                }
+            } else {
+                prompt('Copy this link:', url);
+            }
+        });
+    }
+});
