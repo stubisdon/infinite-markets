@@ -1,5 +1,7 @@
 # Infinite Markets
 
+**[→ Try it now at stubisdon.github.io/infinite-markets](https://stubisdon.github.io/infinite-markets/)**
+
 **A one-click business idea generator.** Tap once and you're dropped into a random "infinite market" — a category of human need that will never go away — along with why it's durable, real-world examples of products being built there, and notable companies already playing in it.
 
 It's a pocket-sized muse for founders, builders, and anyone who likes asking *"what could I solve here?"*
